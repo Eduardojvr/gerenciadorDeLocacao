@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+ <head>
+  <title>Menu</title>
+ <link rel="stylesheet" type="text/css" href="_form.css">
+ </head>
+
+<body>
+ <div id="fundo-externo">
+<nav id="menu" >
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Missão</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+</nav>
+
+    <div id="fundo">
+        <img src="https://static.pexels.com/photos/28221/pexels-photo-28221.jpg" alt="" />
+    </div>
+</div>
+
+ </body>
+ </html>
+
+ <div id="opcoes">
+ 	<h1 id="forma">Sistema de Gerenciamento<br></h1>
+ 	<ul id="formata">
+        <% if logged_in? == false %>
+         <!-- <li> --><p><a href="http://localhost:3000/users/new">Cadastrar</a></p><!-- </li> -->
+        <!--  <li> --><p><a href="http://localhost:3000/sign_in">Logar</a></p><!-- </li> -->
+         <%else%>
+        <!--  <li> --><p><a href="http://localhost:3000/gerenciador/index">Gerenciador</a></p><!-- </li> -->
+         <!-- <li> --><p><%= link_to "Log out", sign_out_path, method: "delete"%></p><!-- </li> -->
+        <%end%>
+ 		
+	 </ul>
+</div>
+
+
+ 
+ 

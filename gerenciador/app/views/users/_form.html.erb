@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="_form.css">
+</head>
+<body>
+<%= form_for @user do |f| %>
+              <% if @user.errors.any? %>
+              <div id="error_explanation">
+                          <div class="alert-error">
+                                     O formulário contém <%= pluralize(@user.errors.count, "erro") %>.
+                          </div>
+                          <ul>
+                                     <% @user.errors.full_messages.each do |msg| %>
+                                     <li><%= msg %></li>
+                                     <% end %>
+                          </ul>
+              </div>
+  <% end %>
+  <div class="field">
+                          <%= f.label :nome%>
+                          <%= f.text_field :nome%><br><br>
+
+              </div>
+              <div class="field">
+                          <%= f.label :email %>
+                          <%= f.text_field :email %><br><br>
+              </div>
+              <div class="field">
+                          <%= f.label :senha %>
+                          <%= f.password_field :password %><br><br>
+              </div>
+              <div class="field">
+                          <%= f.label :password_confirmation, "Confirmar senha"%>
+                          <%= f.password_field :password_confirmation %><br><br>
+              </div>
+              <div class="actions">
+                         <center><%= f.submit "Cadastrar"%></center>
+                      
+              </div>
+  <% end %> 
+  </body>
+</html>
+
+
