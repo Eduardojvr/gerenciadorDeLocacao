@@ -30,11 +30,11 @@
  	<h1 id="forma">Sistema de Gerenciamento<br></h1>
  	<ul id="formata">
         <% if logged_in? == false %>
-         <!-- <li> --><p><a href="http://localhost:3000/users/new">Cadastrar</a></p><!-- </li> -->
-        <!--  <li> --><p><a href="http://localhost:3000/sign_in">Logar</a></p><!-- </li> -->
-         <%else%>
-        <!--  <li> --><p><a href="http://localhost:3000/gerenciador/index">Gerenciador</a></p><!-- </li> -->
-         <!-- <li> --><p><%= link_to "Log out", sign_out_path, method: "delete"%></p><!-- </li> -->
+        <p><a href="http://localhost:3000/users/new">Cadastrar</a></p>
+        <p><a href="http://localhost:3000/sign_in">Logar</a></p>
+        <%else%>
+        <p><a href="http://localhost:3000/gerenciador/index">Gerenciador</a></p>
+        <p><%= link_to "Log out", sign_out_path, method: "delete"%></p>
         <%end%>
  		
 	 </ul>

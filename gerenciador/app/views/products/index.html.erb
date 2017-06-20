@@ -1,0 +1,40 @@
+
+
+
+<div id="fundo-externo">
+    <div id="fundo">
+        <img src="https://wallpaperbrowse.com/media/images/qNT1SjD.jpg" alt="" />
+    </div>
+</div>
+<div id="site">
+<div id="formulario">
+ <div id="form">
+ <p id="notice"><%= notice %></p>
+
+<center><h1>.:Produtos:.</h1></center><br>
+
+<table>
+  <thead>
+      <p>Nome &nbsp  Quantidade</p>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.nome%><a>&nbsp &nbsp</a></td> 
+        <td><%= product.quantidade %><a>&nbsp &nbsp</a></td>
+        <td><%= link_to 'Ver', product %><a>&nbsp &nbsp</a></td>
+        <td><%= link_to 'Editar', edit_product_path(product) %><a>&nbsp &nbsp</a></td>
+        <td><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Are you sure?' } %><a>&nbsp &nbsp</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo produto', new_product_path %>
+
+ </div>
+ </div>  
+</div>
