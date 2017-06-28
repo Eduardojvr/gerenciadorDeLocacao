@@ -1,7 +1,14 @@
-
-
-
 <div id="fundo-externo">
+  <head>
+    <nav id="menu" >
+        <ul>
+            <li><a href="http://localhost:3000">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Missão</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+  </head>
     <div id="fundo">
         <img src="https://wallpaperbrowse.com/media/images/qNT1SjD.jpg" alt="" />
     </div>
@@ -21,11 +28,11 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.nome%><a>&nbsp &nbsp</a></td> 
+        <td><%= product.nome%><a>&nbsp &nbsp</a></td>
         <td><%= product.quantidade %><a>&nbsp &nbsp</a></td>
         <td><%= link_to 'Ver', product %><a>&nbsp &nbsp</a></td>
         <td><%= link_to 'Editar', edit_product_path(product) %><a>&nbsp &nbsp</a></td>
-        <td><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Are you sure?' } %><a>&nbsp &nbsp</a></td>
+        <td><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Deseja Excluir?' } %><a>&nbsp &nbsp</a></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,5 +43,5 @@
 <%= link_to 'Novo produto', new_product_path %>
 
  </div>
- </div>  
+ </div>
 </div>
