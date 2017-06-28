@@ -10,6 +10,10 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= form.label :cliente %>
+    <%= collection_select(:client, :client_id, Client.all, :id, :nome)%>
+  </div>
 
   <div class="field">
     <%= form.label :nome %>
