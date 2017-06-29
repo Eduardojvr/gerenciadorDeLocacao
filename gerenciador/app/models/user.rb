@@ -1,6 +1,6 @@
  class User < ActiveRecord::Base 
   validates :nome, presence: true, length: { maximum: 50 }
-   
+ has_many:products	   
   before_save { self.email = email.downcase }
   validates :email, presence: true, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create}, uniqueness: {case_sensitive: false}
    
