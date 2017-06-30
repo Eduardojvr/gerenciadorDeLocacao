@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  resources :locations
   resources :clients
   resources :products
-  get 'gerenciador/index'
-
+  get 'locations/index'
   get 'gerenciador/index'
   get 'sessions/new'
   get 'inicio/index'
