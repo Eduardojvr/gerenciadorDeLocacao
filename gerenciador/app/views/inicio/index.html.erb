@@ -7,19 +7,19 @@
  <link rel="stylesheet" type="text/css" href="_form.css">
  </head>
 
-<body>
+<body id="inicio">
  <div id="fundo-externo">
-<nav id="menu" >
+<center><nav id="menu" >
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Sobre</a></li>
         <li><a href="#">Missão</a></li>
         <li><a href="#">Contato</a></li>
     </ul>
-</nav>
+</nav></center>
 
     <div id="fundo">
-        <img src="https://static.pexels.com/photos/28221/pexels-photo-28221.jpg" alt="" />
+        <img src="http://cdn.wallpapersafari.com/52/6/8EUfWs.jpeg" alt="" />
     </div>
 </div>
 
@@ -30,11 +30,20 @@
  	<h1 id="forma">Sistema de Gerenciamento<br></h1>
  	<ul id="formata">
         <% if logged_in? == false %>
-        <p><a href="http://localhost:3000/users/new">Cadastrar</a></p>
-        <p><a href="http://localhost:3000/sign_in">Logar</a></p>
+     
+       <a id="bt1" href="http://localhost:3000/sign_in"><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" type="submit" style="width: 250px; height: 45px">Logar</button></a>
+        
+          <a id="bt2" href="http://localhost:3000/users/new"><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" style="width: 250px; height: 45px">Cadastrar</button></a>
+    
         <%else%>
-        <p><a href="http://localhost:3000/gerenciador/index">Gerenciador</a></p>
-        <p><%= link_to "Log out", sign_out_path, method: "delete"%></p>
+
+        <a id="bt1" href="http://localhost:3000/gerenciador/index"><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" style="width: 250px; height: 45px">Gerenciador</button></a>
+
+
+   <button id="bt3" class="btn btn-lg btn-primary btn-block btn-signin" type="submit" style="width: 250px; height: 45px"><%= link_to "Sair", sign_out_path, method: "delete"%></button>
+
+        
+    
         <%end%>
  		
 	 </ul>

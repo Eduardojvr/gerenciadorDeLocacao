@@ -1,47 +1,41 @@
-<!DOCTYPE html>
 
-<html>
-<head>
-  <title></title>
- 
-</head>
-<body>
-<div id="fundo-externo">
- <nav id="menu" >
-    <ul>
+<html id="login">
+
+
+
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+  <body id="login">  
+    <nav id="menu" >
+    <center><ul>
         <li><a href="http://localhost:3000">Home</a></li>
         <li><a href="#">Sobre</a></li>
         <li><a href="#">Missão</a></li>
         <li><a href="#">Contato</a></li>
-    </ul>
+    </ul></center>
 </nav>
-    <div id="fundo">
-        <img src="https://static.pexels.com/photos/28221/pexels-photo-28221.jpg" alt="" />
-    </div>
-</div>
- <%= form_for :session, url: sign_in_path do |f| %>
-
-   <div id="site">
-<div id="formulario-formatacao">
- <div id="form">
-    <div class="field">
-      <a id="log">Login</a><br><br>
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %><br><br>
-    </div>
-   
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-    <div class="actions">
-      <%= f.submit "Log in" %>
-    </div>
-  <p>Não cadastrado? <%= link_to "Cadastrar", new_user_path %></p>
-  <% end %>
-  </div>
-  </div>
-  </div>
-</body>
-</html>
-
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <%= form_for :session, url: sign_in_path do |f| %>
+            <a id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email">
+                <p id="select-color"><%= f.label :email %>
+                <%= f.email_field :email, autofocus: true %></p>
+                <p id="select-color"><%= f.label :senha %>
+                <%= f.password_field :password, autocomplete: "off" %></p> 
+                   
+               <center><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Logar</button></center>
+              
+                 <center><p>Não cadastrado? <%= link_to "Cadastrar", new_user_path %></p></center>
+                <%end%>
+            </form><!-- /form -->
+            
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+    </body>
+    </html>
