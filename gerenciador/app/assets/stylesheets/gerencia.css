@@ -3,20 +3,17 @@
 	color: #FFFFFF;
 	text-align: center;
 	padding-top: 5%;
-	background-color: #4B0082;
+
 
 }
-body{
-	/*background-color: #FF8C00;*/
-	background-color: #8FBC8F
-}
+
 
 #client,#cad,#list{
 	font-size: 30px;
 	color: #FFFFFF;
 	text-align: center;
 	margin-top: 100px;
-	border-style: double;
+	/*border-style: double;*/
 	padding: 20px 20px 20px 20px;
 	/*border-bottom:3px solid #EA0000;*/
 }
@@ -26,4 +23,9 @@ body{
 }
 #list:hover{
 	background: rgba(255,255,255,0.5);
+}
+
+#forma-gerencia{
+	vertical-align: -60%;
+	margin-left: 35%;
 }

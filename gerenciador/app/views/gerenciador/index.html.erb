@@ -1,23 +1,51 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-	<title>Gerenciador</title>
-	<link rel="stylesheet" type="text/css" href="gerencia.css">
-</head>
-<body>
-<nav id="menu" >
+
+ <head>
+  <title>Menu</title>
+ <link rel="stylesheet" type="text/css" href="_form.css">
+ </head>
+
+<body id="inicio">
+ <div id="fundo-externo">
+<center><nav id="menu" >
     <ul>
         <li><a href="http://localhost:3000">Home</a></li>
         <li><a href="#">Sobre</a></li>
         <li><a href="#">Missão</a></li>
         <li><a href="#">Contato</a></li>
     </ul>
-</nav>
-<h1 id="titulo">Gerenciador</h1>
-	<lu>
-		<center><p id="client"><%= link_to "Cadastrar Cliente", "http://localhost:3000/clients"%></p></center>
-		<p id="cad"><%= link_to "Produtos", "http://localhost:3000/products"%></p>
-		<p id="list"><%= link_to "Locações", "http://localhost:3000"%></p
-	</lu>
-</body>
-</html>
+</nav></center>
+
+    <div id="fundo">
+        <img src="http://pt.wallpapersja.com/wp-content/uploads/sites/11/2016/09/Gradiente-luz-escuro-fundo.jpg" alt="" />
+    </div>
+</div>
+
+
+
+ <div id="opcoes">
+ 	<h1 id="forma">Gerenciador<br></h1>
+ 	<ul id="formata">
+
+
+        <a id="bt4" href="http://localhost:3000/products"><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" style="width: 250px; height: 45px">Produtos</button></a>
+
+         <a id="bt5" href="http://localhost:3000/gerenciador/index"><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" style="width: 250px; height: 45px">Locações</button></a><br>
+
+       
+
+
+
+
+
+
+ 		
+	 </ul>
+</div>
+
+
+  </body>
+ </html>
+ 
