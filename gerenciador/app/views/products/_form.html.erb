@@ -10,22 +10,22 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= form.label :cliente %>
-    <%= collection_select(:client, :client_id, Client.all, :id, :nome)%>
+
+
+    <div class="field">
+    <a>&nbsp &nbsp &nbsp</a><%= form.label :nome %>
+    <center><%= form.text_field :nome, id: :product_nome %><br><br></center>
   </div>
 
   <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome, id: :product_nome %><br><br>
-  </div>
-
-  <div class="field">
-    <%= form.label :quantidade %>
-    <%= form.number_field :quantidade, id: :product_quantidade %><br><br>
-  </div>
+    <a>&nbsp &nbsp &nbsp</a><%= form.label :quantidade %>
+    <center><%= form.number_field :quantidade, id: :product_quantidade %><br><br>
+  </div></center>
 
   <div class="actions">
-    <%= form.submit %>
+     <center><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" >Cadastrar</button></center>
+
+       
+    <!-- <%= form.submit %> -->
   </div>
 <% end %>
