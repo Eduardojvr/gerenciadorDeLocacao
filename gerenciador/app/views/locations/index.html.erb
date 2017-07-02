@@ -1,0 +1,55 @@
+
+<div id="fundo-externo">
+  <head>
+   <center> <nav id="menu" >
+        <ul>
+            <li><a href="http://localhost:3000">Home</a></li>
+            <li><a href="http://localhost:3000/gerenciador/index">Gerenciador</a></li>
+            <li><a href="#">Missão</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav></center>
+  </head>
+    <div id="fundo">
+        <img src="http://fondopantalla.com.es/download/492/2560x1600/crop/fondo-abstracto-degradado.jpg" alt="" />
+    </div>
+</div>
+<div id="site1">
+<div id="formulario">
+ <div id="form">
+ <!-- <p id="notice"><%= notice %></p> -->
+
+
+<center><h1>Locações</h1></center><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Produto</th>
+      <th>Quantidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.nome %></td>
+        <td><%= location.produto %></td>
+        <td><%= location.quantidade %></td>
+
+
+        <td><%= link_to 'Excluir', location, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+      </tr>
+    <% end %> 
+  </tbody>
+</table>
+
+<br>
+   <center><a id="bt5" href="http://localhost:3000/locations/new"><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" style="width: 250px; height: 45px">Nova locação</button></a></center>
+    <a href="http://localhost:3000/gerenciador/index">Voltar</a>  
+
+ </div>
+ </div>
+</div>

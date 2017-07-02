@@ -1,56 +1,61 @@
 
+
+
+
 <div id="fundo-externo">
   <head>
-    <nav id="menu" >
+   <center> <nav id="menu" >
         <ul>
             <li><a href="http://localhost:3000">Home</a></li>
-            <li><a href="#">Sobre</a></li>
+            <li><a href="http://localhost:3000/gerenciador/index">Gerenciador</a></li>
             <li><a href="#">Missão</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
-    </nav>
+    </nav></center>
   </head>
     <div id="fundo">
-        <img src="http://2.bp.blogspot.com/-FAERiA-TNx0/TlGzYIOcYSI/AAAAAAAAA-s/cMlO0cqW3SA/s1600/smile_wallpaper.png" alt="" />
+        <img src="http://fondopantalla.com.es/download/492/2560x1600/crop/fondo-abstracto-degradado.jpg" alt="" />
     </div>
 </div>
-<div id="site">
+<div id="site1">
 <div id="formulario">
  <div id="form">
+ <!-- <p id="notice"><%= notice %></p> -->
 
-<p id="notice"><%= notice %></p>
 
-<center><h1><font color="red">.:Cadastrar Cliente:.</font></h1><center>
-
+<center><h1>Clientes</h1></center>
 <table>
   <thead>
     <tr>
-
-      <td><font color="black">Nome &nbsp &nbsp Nascimento &nbsp &nbsp Rg &nbsp &nbsp Cpf &nbsp &nbsp Telefone &nbsp &nbsp Endereco &nbsp &nbsp Cep</font></td>
-      <p colspan="3"></p>
+      <th>Nome<a>&nbsp &nbsp </a></th>
+      <th>Cpf<a>&nbsp &nbsp </a></th>
+      <th>Telefone<a>&nbsp &nbsp </a></th>
+      <th>Cep</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-
-    <% @clients.each do |client| %>
+     <% @clients.each do |client| %>
       <tr>
         <td><%= client.nome %><a>&nbsp &nbsp</a></td>
-        <td><%= client.nascimento %><a>&nbsp &nbsp</a></td>
-        <td><%= client.rg %><a>&nbsp &nbsp</a></td>
         <td><%= client.cpf %><a>&nbsp &nbsp</a></td>
         <td><%= client.telefone %><a>&nbsp &nbsp</a></td>
-        <td><%= client.endereco %><a>&nbsp &nbsp</a></td>
         <td><%= client.cep %><a>&nbsp &nbsp</a></td>
-        <td><%= link_to 'Visualizar', client %></td>
-        <td><%= link_to 'Editar', edit_client_path(client) %><a>&nbsp &nbsp</a></td>
+        <td><%= link_to 'Visualizar', client %><a>&nbsp &nbsp </a></td>
+        <td><%= link_to 'Editar', edit_client_path(client) %><a>&nbsp &nbsp </a></td>
         <td><%= link_to 'Excluir', client, method: :delete, data: { confirm: 'Deseja Excluir?' } %><a>&nbsp &nbsp</a></td>
       </tr>
+
     <% end %>
   </tbody>
 </table>
 
 <br>
+   <center><a id="bt5" href="http://localhost:3000/clients/new"><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" style="width: 250px; height: 45px">Cadastrar</button></a></center>
 
-<%= link_to 'Novo Cliente', new_client_path %>
 <%= link_to 'Voltar', gerenciador_index_path %> 
+ </div>
+ </div>
+</div>
+

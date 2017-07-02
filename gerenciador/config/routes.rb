@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :locations
   resources :clients
   resources :products
   get 'gerenciador/index'

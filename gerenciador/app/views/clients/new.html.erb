@@ -1,28 +1,33 @@
+
+
+
 <div id="fundo-externo">
-  <head>
-    <nav id="menu" >
-        <ul>
-            <li><a href="http://localhost:3000">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Missão</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
-  </head>
     <div id="fundo">
-        <img src="http://2.bp.blogspot.com/-FAERiA-TNx0/TlGzYIOcYSI/AAAAAAAAA-s/cMlO0cqW3SA/s1600/smile_wallpaper.png" alt="" />
+    <center><nav id="menu" >
+    <ul>
+        <li><a href="http://localhost:3000">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Missão</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+</nav></center>
+        <img src="http://www.fixabay.com/reimg/resize-img.php?src=http://www.fixabay.com/images/Abstract/zlysuntlwa3.jpg&h=768&w=1024" alt="" />
     </div>
-  </div>
 </div>
-<div id="site">
+
+<div id="site1">
   <div id="formulario-formatacao">
     <div id="form">
-    <h1>Novo Cliente</h1>
+    <div id="cad-product">
+      <h1>Informações</h1><br><br>
 
+    
     <%= render 'form', client: @client %>
 
     <%= link_to 'Voltar', clients_path %>
 
+      </div>
     </div>
   </div>
 </div>
+

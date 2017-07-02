@@ -5,49 +5,41 @@
 
       <ul>
       <% client.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <!-- <li><%= message %></li> -->
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nome %>
+  <center><div class="field">
+    <%= form.label :nome %><br>
     <%= form.text_field :nome, id: :client_nome %>
   </div>
 
-  <div class="field">
-    <%= form.label :nascimento %>
-    <%= form.text_field :nascimento, id: :client_nascimento %>
-  </div>
 
   <div class="field">
-    <%= form.label :rg %>
-    <%= form.text_field :rg, id: :client_rg %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cpf %>
+    <br><%= form.label :cpf %><br>
     <%= form.text_field :cpf, id: :client_cpf %>
   </div>
 
   <div class="field">
-    <%= form.label :telefone %>
+   <br><%= form.label :telefone %><br>
     <%= form.text_field :telefone, id: :client_telefone %>
   </div>
 
   <div class="field">
-    <%= form.label :endereco %>
+    <br><%= form.label :endereco %><br>
     <%= form.text_field :endereco, id: :client_endereco %>
   </div>
 
   <div class="field">
-    <%= form.label :cep %>
+    <br><%= form.label :cep %><br>
     <%= form.text_field :cep, id: :client_cep %>
   </div>
 
+
   <div class="actions">
-    <%= form.submit %>
-  </div>
+     <br><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" >Enviar</button></center>
+     <br>
 
 <% end %>

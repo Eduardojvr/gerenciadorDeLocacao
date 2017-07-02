@@ -1,0 +1,36 @@
+<%= form_with(model: location, local: true) do |form| %>
+  <% if location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(location.errors.count, "error") %> prohibited this location from being saved:</h2>
+
+      <ul>
+      <% location.errors.full_messages.each do |message| %>
+        <!-- <li><%= message %></li> -->
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<center><div class="field">
+    <%= form.label :Cliente %><br>
+    <%= form.select :nome, Client.all%>
+</div>
+
+<div class="field">
+    <br><%= form.label :Produto %><br>
+    <%= form.select :nome, Product.all%> 
+</div>
+
+  <div class="field">
+  <br><%= form.label :quantidade %><br>
+  <%= form.number_field :quantidade, id: :location_quantidade %>
+  </div>
+  </div>
+
+
+  <div class="actions">
+    <br>
+   <center><a id="bt5"><button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" style="width: 250px; height: 45px">Nova locação</button></a></center>
+  </div></center>
+<% end %>
