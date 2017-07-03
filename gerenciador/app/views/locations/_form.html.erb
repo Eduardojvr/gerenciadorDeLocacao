@@ -11,16 +11,14 @@
     </div>
   <% end %>
 
-
-<center><div class="field">
-    <%= form.label :Cliente %><br>
-    <%= form.select :nome, Client.all%>
-</div>
-
+<div class="field">
+    <br><%= form.label :Cliente %><br>
+    <%= form.select :nome, options_from_collection_for_select(@clients, :id, :nome)%> 
+</div> 
 <div class="field">
     <br><%= form.label :Produto %><br>
-    <%= form.select :produto, Product.all%> 
-</div>
+    <%= form.select :produto, options_from_collection_for_select(@products, :id, :nome)%> 
+</div> 
 
   <div class="field">
   <br><%= form.label :quantidade %><br>
