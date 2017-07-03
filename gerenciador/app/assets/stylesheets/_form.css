@@ -154,5 +154,8 @@ p {
     top: 100px;
     left: 45%;
     padding: 20px;
-    
+}
+
+#nom{
+    padding: 80px;
 }

@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-<div class="field">
+<center><div class="field">
     <br><%= form.label :Cliente %><br>
     <%= form.select :client_id, options_from_collection_for_select(Client.all, :id, :nome)%> 
 
@@ -23,8 +23,8 @@
 
   <div class="field">
   <br><%= form.label :quantidade %><br>
-  <%= form.number_field :quantidade, id: :location_quantidade %>
-  </div>
+  <%= form.number_field :quantidade, id: :location_quantidade%>
+  </div></center>
   </div>
 
 
