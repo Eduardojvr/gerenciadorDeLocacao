@@ -5,7 +5,7 @@
 
       <ul>
       <% location.errors.full_messages.each do |message| %>
-        <!-- <li><%= message %></li> -->
+         <li><%= message %></li> 
       <% end %>
       </ul>
     </div>
@@ -13,11 +13,12 @@
 
 <div class="field">
     <br><%= form.label :Cliente %><br>
-    <%= form.select :nome, options_from_collection_for_select(@clients, :id, :nome)%> 
+    <%= form.select :client_id, options_from_collection_for_select(Client.all, :id, :nome)%> 
+
 </div> 
 <div class="field">
     <br><%= form.label :Produto %><br>
-    <%= form.select :produto, options_from_collection_for_select(@products, :id, :nome)%> 
+    <%= form.select :product_ids, options_from_collection_for_select(@products, :id, :nome, form.object.products.map(&:id)),{},{multiple: true}%> 
 </div> 
 
   <div class="field">

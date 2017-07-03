@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
-
+  before_action :setdata, only: [:new, :create, :edit, :update]
   # GET /locations
   # GET /locations.json
   def index
@@ -16,17 +16,21 @@ class LocationsController < ApplicationController
   # GET /locations/new
   def new
     @location = Location.new
-    @products = Product.all
-    @clients = Client.all
   end
 
   # GET /locations/1/edit
   def edit
   end
 
+  def setdata
+    @products = Product.all
+    @clients = Client.all
+  end
+
   # POST /locations
   # POST /locations.json
   def create
+
     @location = Location.new(location_params)
 
     respond_to do |format|
@@ -72,6 +76,6 @@ class LocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def location_params
-      params.require(:location).permit(:nome, :produto, :quantidade)
+      params.require(:location).permit(:client_id, :quantidade, product_ids: [])
     end
 end

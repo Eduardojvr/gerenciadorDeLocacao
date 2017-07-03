@@ -35,8 +35,10 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td><%= location.nome %></td>
-        <td><%= location.produto %></td>
+        <td><%= location.client.nome %></td>
+        <td><% location.products.each do |pro|%>
+        <%=pro.nome%>
+        <%end%></td>
         <td><%= location.quantidade %></td>
 
 

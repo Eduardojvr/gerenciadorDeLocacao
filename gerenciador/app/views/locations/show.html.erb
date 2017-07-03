@@ -1,8 +1,3 @@
-
-
-
-
-
 <div id="fundo-externo">
   <head>
    <center> <nav id="menu" >
@@ -28,12 +23,14 @@
 
 <p>
   <strong>Nome:</strong>
-  <%= @location.nome %>
+  <%= @location.client.nome %>
 </p>
 
 <p>
   <strong>Produto:</strong>
-  <%= @location.produto %>
+  <% @location.products.each do |prod| %>
+  <%=prod.nome%>
+  <%end%>
 </p>
 
 <p>

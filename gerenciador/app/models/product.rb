@@ -1,3 +1,4 @@
 class Product < ApplicationRecord
-belongs_to :location
+has_and_belongs_to_many :locations, table_name: "locations_products"
+  
 end
