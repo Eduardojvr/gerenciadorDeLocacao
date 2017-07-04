@@ -4,8 +4,9 @@ class Client < ApplicationRecord
   validates :telefone, presence: true
   validates :endereco, presence: true
   validates :cep, presence: true
-  has_many :locations
 
+  has_many :locations
+# Cada cliente pode fazer varias locacoes
 
 
 end
